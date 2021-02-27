@@ -1,0 +1,68 @@
+.texta{
+    resize: vertical;
+    min-height: 40vh;
+}
+
+.help-ico{
+    svg{
+        height: 0.74em !important;
+        width: 0.74em !important;
+    }
+}
+
+.tf{
+    input{
+        padding:1.66rem !important;
+    }
+}
+
+.btex{
+    textarea{
+        padding: 7px !important;
+    }
+}
+.curr{
+    margin-left: auto;
+    select,label{
+        font-size: 0.8rem;
+    }
+    .MuiSelect-root{
+        padding: 5px!important;
+    }
+}
+
+.MuiOutlinedInput-input{
+    padding: 18.5px 14px !important;
+}
+
+.jobform{
+    input{
+        height: 2.2rem;
+        padding: 18px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .texta{
+        min-height: 20vh;
+    }
+}
+@media only screen and (max-width: 640px) {
+ .jobform{
+    input{
+       height: 1.8rem;
+   }
+   .sald{
+       flex-direction: column;
+   }
+   .sal{
+       margin-left: 0;
+       margin-top: 0.6rem;
+   }
+   .tf{
+       input{
+           padding: 1.48rem !important;
+       }
+   }
+}
+}
