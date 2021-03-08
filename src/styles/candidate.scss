@@ -30,10 +30,16 @@
 
 .floati:hover{
     border-color:  white;
-    background-color: #265cff;
+    background-color: #6EB6FF;
     .MuiSvgIcon-root{
         color: white;
     }
+}
+
+.activeli{
+    color:#6EB6FF !important;
+    font-weight: 700 !important;
+    text-decoration:  underline;
 }
 
 .addcmti{
@@ -44,7 +50,7 @@
 }
 
 .cbtn{
-    color: #265cff !important;
+    color: #6EB6FF !important;
     background-color:  white!important;
     font-size: 0.74rem !important;
     font-family: inherit !important;
@@ -55,7 +61,7 @@
 }
 .cbtn-active{
     color: white!important;
-    background-color: #265cff !important;
+    background-color: #6EB6FF !important;
 }
 .comment{
     border:1px solid rgb(231, 225, 225);
@@ -186,7 +192,7 @@
         height: 40%;
     }
     .cbtn{
-        color: #265cff !important;
+        color: #6EB6FF !important;
         background-color:  white!important;
         font-size: 0.5rem !important;
         font-family: inherit !important;
@@ -198,7 +204,7 @@
     }
     .cbtn-active{
         color: white!important;
-        background-color: #265cff !important;
+        background-color: #6EB6FF !important;
     }
     .read{
         width: 85%;

@@ -18,7 +18,7 @@ export const Candidatebox = ({candidate}) => {
     const {native,other} = languages;
     
     return (
-        <div style={{borderLeft:"2px solid #265cff"}} className="ma1 dib ch bg-white pa3 mt3 br3">
+        <div style={{borderLeft:"2px solid #6EB6FF"}} className="ma1 dib ch bg-white pa3 mt3 br3">
             <ResumePreview
 				open={isPreviewOpen}
 				close={() => setisPreviewOpen(!isPreviewOpen) }
@@ -28,7 +28,7 @@ export const Candidatebox = ({candidate}) => {
                 <div className='flex items-center'>
                     <div className='flex name_candidatebox flex-column'>
                         <p className='ma0 f4-l f5-m f7'>{name}</p>
-                        <p style={{color:"#265cff"}} className='ma0 gray f7-l mt1 f7-m f8-mo'>{level}</p>
+                        <p style={{color:"#6EB6FF"}} className='ma0 gray f7-l mt1 f7-m f8-mo'>{level}</p>
                         <p className='ma0 mt2_2 gray f8 f9-m f10-mo mt1'>Registered 3 hours ago</p>
                     </div>
                 </div>
@@ -61,7 +61,7 @@ export const Shortlist = ({candidate}) => {
     const mail_sub = `You have been shortlisted for interview by ${company} via Moyyn`
 
     return (
-        <div style={{borderLeft:"2px solid #265cff"}} className="ma1 dib ch bg-white pa3 mt3 br3">
+        <div style={{borderLeft:"2px solid #6EB6FF"}} className="ma1 dib ch bg-white pa3 mt3 br3">
             <ResumePreview
 				open={isPreviewOpen}
 				close={() => setisPreviewOpen(!isPreviewOpen) }
@@ -71,7 +71,7 @@ export const Shortlist = ({candidate}) => {
                 <div className='flex name_candidatebox items-center'>
                     <div className='flex flex-column'>
                         <p className='ma0 f4-l f5-m f7'>{name}</p>
-                        <p style={{color:"#265cff"}} className='ma0 gray f7-l mt1 f7-m f8-mo'>{level}</p>
+                        <p style={{color:"#6EB6FF"}} className='ma0 gray f7-l mt1 f7-m f8-mo'>{level}</p>
                         <p className='ma0 mt2_2 gray f8 f9-m f10-mo mt1'>Registered 3 hours ago</p>
                     </div>
                 </div>
@@ -101,7 +101,7 @@ export const Rejected = ({candidate}) => {
     const ismobile = useMediaQuery({ query: `(max-width: 580px)` })
 
     return (
-        <div style={{borderLeft:"2px solid #265cff"}} className="ma1 dib ch bg-white pa3 mt3 br3">
+        <div style={{borderLeft:"2px solid #6EB6FF"}} className="ma1 dib ch bg-white pa3 mt3 br3">
             <ResumePreview
 				open={isPreviewOpen}
 				close={() => setisPreviewOpen(!isPreviewOpen) }
@@ -111,7 +111,7 @@ export const Rejected = ({candidate}) => {
                 <div className='flex items-center'>
                     <div className='flex name_candidatebox flex-column'>
                         <p className='ma0 f4-l f5-m f7'>{name}</p>
-                        <p style={{color:"#265cff"}} className='ma0 gray f7-l mt1 f7-m f8-mo'>{level}</p>
+                        <p style={{color:"#6EB6FF"}} className='ma0 gray f7-l mt1 f7-m f8-mo'>{level}</p>
                         <p className='ma0 mt2_2 gray f8 f9-m f10-mo mt1'>Registered 3 hours ago</p>
                     </div>
                 </div>
@@ -124,7 +124,7 @@ export const Rejected = ({candidate}) => {
                 <Commentbox comments_data={comments}/>
                 <div className='h-100 w-25-l w-40-m w-30 pr4 mb2 self-center'>
                     <div className='flex justify-center flex-row-l flex-row-m flex-column justify-center items-center'>
-                        <button style={{color:"#265cff"}} className="bg-white pointer ml2-l ml2-m ml3 c-shadow w-80-l w-50-m w3 h2-l mt2  mt0-l mt0-m bn link dim br2 ph3 pv2-l pv1 dib"><div className='btnic flex f9-mo f8-m f7-l f8-m  items-center justify-center'><KeyboardBackspaceOutlinedIcon/><span className='ml2'>Shortlist{ismobile?"":" Again"}</span></div></button>
+                        <button style={{color:"#6EB6FF"}} className="bg-white pointer ml2-l ml2-m ml3 c-shadow w-80-l w-50-m w3 h2-l mt2  mt0-l mt0-m bn link dim br2 ph3 pv2-l pv1 dib"><div className='btnic flex f9-mo f8-m f7-l f8-m  items-center justify-center'><KeyboardBackspaceOutlinedIcon/><span className='ml2'>Shortlist{ismobile?"":" Again"}</span></div></button>
                     </div>
                 </div>
             </div>
@@ -139,7 +139,7 @@ export const Selected = ({candidate}) => {
     const ismobile = useMediaQuery({ query: `(max-width: 580px)` })
 
     return (
-        <div style={{borderLeft:"2px solid #265cff"}} className="ma1 dib ch bg-white pa3 mt3 br3">
+        <div style={{borderLeft:"2px solid #6EB6FF"}} className="ma1 dib ch bg-white pa3 mt3 br3">
             <ResumePreview
 				open={isPreviewOpen}
 				close={() => setisPreviewOpen(!isPreviewOpen) }
@@ -149,7 +149,7 @@ export const Selected = ({candidate}) => {
                 <div className='flex items-center'>
                     <div className='flex name_candidatebox flex-column'>
                         <p className='ma0 f4-l f5-m f7'>{name}</p>
-                        <p style={{color:"#265cff"}} className='ma0 gray f7-l mt1 f7-m f8-mo'>{level}</p>
+                        <p style={{color:"#6EB6FF"}} className='ma0 gray f7-l mt1 f7-m f8-mo'>{level}</p>
                         <p className='ma0 mt2_2 gray f8 f9-m f10-mo mt1'>Registered 3 hours ago</p>
                     </div>
                 </div>
@@ -162,7 +162,7 @@ export const Selected = ({candidate}) => {
                 <Commentbox comments_data={comments}/>
                 <div className='h-100 w-25-l w-40-m w-30 pr4 mb2 self-center'>
                     <div className='flex justify-center flex-row-l flex-row-m flex-column justify-center items-center'>
-                        <button onClick={(e) => {window.location.href = `mailto:${email}?subject=Job at Moyyn&body=Hello, thsnks for applying`; e.preventDefault();}} style={{color:"#265cff"}} className="bg-white pointer ml2-l ml2-m ml3 c-shadow w-80-l w-50-m w3 h2-l mt2  mt0-l mt0-m bn link dim br2 ph3 pv2-l pv1 dib"><div className='btnic flex f9-mo f8-m f7-l f8-m  items-center justify-center'><MailOutlinedIcon/><span className='ml2'>Send Mail</span></div></button>
+                        <button onClick={(e) => {window.location.href = `mailto:${email}?subject=Job at Moyyn&body=Hello, thsnks for applying`; e.preventDefault();}} style={{color:"#6EB6FF"}} className="bg-white pointer ml2-l ml2-m ml3 c-shadow w-80-l w-50-m w3 h2-l mt2  mt0-l mt0-m bn link dim br2 ph3 pv2-l pv1 dib"><div className='btnic flex f9-mo f8-m f7-l f8-m  items-center justify-center'><MailOutlinedIcon/><span className='ml2'>Send Mail</span></div></button>
                     </div>
                 </div>
             </div>

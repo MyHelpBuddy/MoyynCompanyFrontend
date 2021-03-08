@@ -34,7 +34,7 @@ export default function Resetpass() {
                     />
                 </div>
                 <div className='mt4'>
-                    <Button onClick={()=>setreseted(!reseted)} className='dim' variant="outlined" style={{ borderColor: "#265cff", color: "#265cff" }}>Update <span className="hide-mo ml1">Password</span></Button>
+                    <Button onClick={()=>setreseted(!reseted)} className='dim' variant="outlined" style={{ borderColor: "#6EB6FF", color: "#6EB6FF" }}>Update <span className="hide-mo ml1">Password</span></Button>
                 </div>
                 <div className={`${reseted?'':'hide'} mt4`}>
                     <Alert severity="success">Password reset Succesfull!</Alert>

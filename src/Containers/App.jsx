@@ -14,7 +14,6 @@ import Settings from '../Components/Settings/Settings';
 import Candidates from '../Components/Candidates/Candidateslist';
 import {postjobinitialvalues,signupforminitialvalues} from "../util/data/initial-values";
 import EditJob from '../Components/PostJob/EditJob';
-import {dummyjobposts } from '../util/data/dummy';
 import ResetEmail from '../Components/Reset Password/EmailtoReset';
 import ResetPass from '../Components/Reset Password/Resetpass';
 import Login from '../Components/Login/Login';
@@ -22,14 +21,16 @@ import Login from '../Components/Login/Login';
 function App(){
 
     const backend_url = "https://moyynclient.eu";
-    const [registered, setregistered] = useState(false);
+    const momatch_backend_url = "https://momatch-backend.herokuapp.com/api/momatch";
 
+    const [registered, setregistered] = useState(false);
     const [loggedin,setloggedin] = useState(false); 
 
     const [companyid, setcompanyid] = useState("");
     const [jobid, setjobid] = useState("");
 
-    const [data] = useState(dummyjobposts);
+    const [data] = useState([]);
+
     const [candidatedata,setcandidatedata] = useState([]);
     
     // eslint-disable-next-line
@@ -74,7 +75,7 @@ function App(){
             </Route>
             <Route exact path='/Candidates'>
               <DashboardHeader logout={setloggedin}/>
-              <Candidates candidates={candidatedata} companyid={companyid} backend_url={backend_url}/>
+              <Candidates candidates={candidatedata} setcandidates={setcandidatedata} jobid={jobid} setjobid={setjobid} companyid={companyid} mo_backend_url={momatch_backend_url} backend_url={backend_url}/>
             </Route>
             <Route exact path='/EditJob'>
               {loggedin?'':<Redirect to='/'/>} 

@@ -7,8 +7,16 @@ import { useHistory } from 'react-router-dom';
 import FreeBanner from '../Candidates/FreeTrialPrompt';
 // import Filter from './Filter';
 
-function Candidateslist({candidates,companyid, backend_url}) {
+function Candidateslist({candidates, setcandidates, companyid, jobid, setjobid, mo_backend_url, backend_url}) {
     let history = useHistory();
+
+    const [active_page, setactive_page] = useState([true,false,false,false,false,false]);
+    
+    const activepage = (val) =>{
+        const def = [false,false,false,false,false,false];
+        def[val] = true;
+        setactive_page(def);
+    }
 
     const [candidate_type,setcandidate_type] = useState(false);
     const [def,setdef] = useState(true);
@@ -17,6 +25,8 @@ function Candidateslist({candidates,companyid, backend_url}) {
     const [isfree, setisfree] = useState(false);
 
     const [count, setcount] = useState(0);
+
+    const [page_no, setpage_no] = useState(1);
 
     let nrml =  candidates.filter((val)=>(val.short === false && val.reject === false && val.select === false)||(val.short === true && val.reject === true && val.select === true));
     let shortlisted = candidates.filter((val)=>(val.short === true && val.reject === false && val.select === false));
@@ -45,6 +55,29 @@ function Candidateslist({candidates,companyid, backend_url}) {
             }).catch(()=>console.log("error fetching data"))
         }
     },[backend_url,companyid]);
+
+    useEffect(()=>{
+        if(jobid !== "" ){
+            fetch(mo_backend_url, {
+                method:'POST',
+                headers:{'Content-Type':'application/json'},
+                body: JSON.stringify({
+                    _id:jobid
+                })  
+            }).then(response=>response.json())
+            .then(data => {
+                if(data.exists){
+                    fetch(mo_backend_url + "/" + jobid + "/" + page_no)
+                    .then(response=>response.json())
+                    .then(data => {
+                        if(data.success){
+                            setcandidates(data.data);
+                        }
+                    }).catch(err=>console.log("error fetching data"));
+                }
+            }).catch(()=>console.log("error fetching data"))
+        }
+    },[mo_backend_url,jobid,page_no,setcandidates]);
 
     const defaultfunc = () =>{
         setcandidate_type(false);
@@ -98,6 +131,16 @@ function Candidateslist({candidates,companyid, backend_url}) {
                     <Button onClick={reject}  variant="contained"   className={`cbtn ${!candidate_type && !def && !iswithd?'cbtn-active':''}`}>Rejected</Button>
                     <Button onClick={selectfun}  variant="contained"   className={`cbtn ${candidate_type && def && !iswithd?'cbtn-active':''}`}>Hired</Button>
                     {/* <Button onClick={selectwith}  variant="contained"   className={`cbtn ${iswithd && !def && !candidate_type?'cbtn-active':''}`}>Withdrawal</Button> */}
+                    <div className="self-center w-20 ml-auto">
+                        <ul className="flex w-100 justify-between ma0">
+                            <li onClick={(e)=>{activepage(0);setpage_no(1);}} className={`${active_page[0]?'activeli':''} pointer dim gray list`}>1</li>
+                            <li onClick={(e)=>{activepage(1);setpage_no(2);}} className={`${active_page[1]?'activeli':''} pointer dim gray list`}>2</li>
+                            <li onClick={(e)=>{activepage(2);setpage_no(3);}} className={`${active_page[2]?'activeli':''} pointer dim gray list`}>3</li>
+                            <li onClick={(e)=>{activepage(3);setpage_no(4);}} className={`${active_page[3]?'activeli':''} pointer dim gray list`}>4</li>
+                            <li onClick={(e)=>{activepage(4);setpage_no(5);}} className={`${active_page[4]?'activeli':''} pointer dim gray list`}>5</li>
+                            <li onClick={(e)=>{activepage(5);setpage_no(6);}} className={`${active_page[5]?'activeli':''} pointer dim gray list`}>6</li>
+                        </ul>
+                    </div>
                 </div>
                 <div className='mv3'>
                     <p className='ma0 gray mr2 f6-l f7-m f8-mo tr'>{'All Candidates'}({count})</p>

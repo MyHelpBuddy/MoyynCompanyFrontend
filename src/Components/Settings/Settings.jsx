@@ -186,7 +186,7 @@ function Settings({companyid, setlogin,backend_url}) {
                                     <div className='flex center justify-around w-80'>
                                         <Button onClick={()=>setconfirmdelete(true)} className='dim flex-1' variant="outlined" style={{borderColor:"red", color:"red"}}>Confirm Delete</Button>
                                         <div className="w2"></div>
-                                        <Button onClick={()=>setdeleteaccount(false)} className='dim flex-1' variant="outlined" style={{borderColor:"#265cff", color:"#265cff"}}>Cancel</Button>
+                                        <Button onClick={()=>setdeleteaccount(false)} className='dim flex-1' variant="outlined" style={{borderColor:"#6EB6FF", color:"#6EB6FF"}}>Cancel</Button>
                                     </div>
                                 </div>
                             </div>
@@ -226,7 +226,7 @@ function Settings({companyid, setlogin,backend_url}) {
                             />
                         </div>
                             <div className='mt4'>
-                                <Button className='dim' onClick={()=>setpasswordupdate(true)} variant="outlined" style={{borderColor:"#265cff", color:"#265cff"}}>Update Password</Button>
+                                <Button className='dim' onClick={()=>setpasswordupdate(true)} variant="outlined" style={{borderColor:"#6EB6FF", color:"#6EB6FF"}}>Update Password</Button>
                             </div>
                         </div>
                         <Snackbar

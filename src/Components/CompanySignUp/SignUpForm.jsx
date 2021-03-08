@@ -225,7 +225,7 @@ function SignUpForm({backend_url, companyid, setregistered,signupforminitialvalu
                         </>:<></>}
                         <br/>
 
-                        <button type='submit' disabled={isSubmitting} style={{background:"#265cff"}} className="mt3 pointer fw6 f7 f6-l w-30-l w-40-m w-50 bn link dim br1 ph3 pv2 mb2 dib white">{editcompany?"Make Changes":"Submit"}</button>
+                        <button type='submit' disabled={isSubmitting} style={{background:"#6EB6FF"}} className="mt3 pointer fw6 f7 f6-l w-30-l w-40-m w-50 bn link dim br1 ph3 pv2 mb2 dib white">{editcompany?"Make Changes":"Submit"}</button>
                     </form>
                 </>
                 );

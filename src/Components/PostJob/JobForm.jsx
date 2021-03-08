@@ -164,17 +164,17 @@ function JobForm({postjobinitialvalues,backend_url,companyid,jobid,editjob}) {
                                     <div className='mt3 relative'>
                                         <WorkExperience />
                                         <div style={{background:"#eef2f5"}} className={`${hov1?'':'hide'} flex justify-center items-center c-shadow tc h3 w5 br2 absolute gray f7 z-11 bottom--2 right--2`}>Please select the job roles relevant to your offer to filter the best candidates</div>
-                                        <div onMouseLeave={()=>sethov1(false)} onMouseOver={()=>sethov1(true)} style={{color:"#265cff"}} className="pointer help-ico dim bottom-2 mb2 right--2 absolute"><HelpOutlineOutlinedIcon/></div>
+                                        <div onMouseLeave={()=>sethov1(false)} onMouseOver={()=>sethov1(true)} style={{color:"#6EB6FF"}} className="pointer help-ico dim bottom-2 mb2 right--2 absolute"><HelpOutlineOutlinedIcon/></div>
                                     </div>
                                     <div className='mt3 relative'>
                                         <Languages />
                                         <div style={{background:"#eef2f5"}} className={`${hov2?'':'hide'} flex justify-center items-center c-shadow tc h3 w5 br2 absolute gray f7 z-11 bottom--1 right--2`}>Please select atleast one native language requirement</div>
-                                        <div onMouseLeave={()=>sethov2(false)} onMouseOver={()=>sethov2(true)} style={{color:"#265cff"}} className="pointer help-ico dim top-1 mt1 right--2 absolute"><HelpOutlineOutlinedIcon/></div>
+                                        <div onMouseLeave={()=>sethov2(false)} onMouseOver={()=>sethov2(true)} style={{color:"#6EB6FF"}} className="pointer help-ico dim top-1 mt1 right--2 absolute"><HelpOutlineOutlinedIcon/></div>
                                     </div>
                                     <div className='relative'>
                                         <Skills />
                                         <div style={{background:"#eef2f5"}} className={`${hov3?'':'hide'} flex justify-center items-center c-shadow tc h3 w5 br2 absolute gray f7 top-2 z-11 right--2`}>Please select as many skills as possible associated with the job</div>
-                                        <div onMouseLeave={()=>sethov3(false)} onMouseOver={()=>sethov3(true)} style={{color:"#265cff"}} className="pointer help-ico dim top-1 right--2 absolute"><HelpOutlineOutlinedIcon/></div>
+                                        <div onMouseLeave={()=>sethov3(false)} onMouseOver={()=>sethov3(true)} style={{color:"#6EB6FF"}} className="pointer help-ico dim top-1 right--2 absolute"><HelpOutlineOutlinedIcon/></div>
                                     </div>
 
                                     <div className='sald flex flex-column flex-row-m flex-row-l w-100 mt4 center items-center justify-between'>
@@ -239,7 +239,7 @@ function JobForm({postjobinitialvalues,backend_url,companyid,jobid,editjob}) {
                                     />
                                       <FormError name="othercountries"/>
                                 </div>
-                                <button type='submit' disabled={isSubmitting} style={{ background: "#265cff" }} className="mt3 pointer fw6 f7 f6-l w-20-l w-30-m w-40 bn link dim br1  ph3 pv2 ph4-m pv3-m ph4-l pv3-l mb2 dib white">Post Job</button>
+                                <button type='submit' disabled={isSubmitting} style={{ background: "#6EB6FF" }} className="mt3 pointer fw6 f7 f6-l w-20-l w-30-m w-40 bn link dim br1  ph3 pv2 ph4-m pv3-m ph4-l pv3-l mb2 dib white">Post Job</button>
                             </form>
                             <div className='flex-1 hide f5-l h-50-m f7 gray bw2 bg-white ma4-l ma4-m ma3 br2 pa3 vh-50-l vh-25'>
                                 <p className='tc'>Note</p>

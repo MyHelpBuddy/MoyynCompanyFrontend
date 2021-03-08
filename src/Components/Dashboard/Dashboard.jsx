@@ -77,7 +77,7 @@ function Dashboard({companyid,backend_url,setcompanyid,setjobid}) {
                             <p className='ma0 f3-l f4-m f6'>Welcome to {company} Dashboard!</p>
                             <p className='f5-l hide f6-m f9-m gray ma0'>Get candidates by our A.I system</p>
                         </div>
-                        <button disabled={disablejob} onClick={()=>history.push('/postjob')} style={{background:"#265cff"}} className={` ${disablejob?"diso":""} c-shadow h2 pointer h7-mo fw6 f8-mo f7-m f6-l mr2 w-20-l w-20-m w4 bn link dim br2 ph3 pv2 dib white`}>{disablejob?"Upgrade to Post Jobs":"Post a Job"}</button>
+                        <button disabled={disablejob} onClick={()=>history.push('/postjob')} style={{background:"#6EB6FF"}} className={` ${disablejob?"diso":""} c-shadow h2 pointer h7-mo fw6 f8-mo f7-m f6-l mr2 w-20-l w-20-m w4 bn link dim br2 ph3 pv2 dib white`}>{disablejob?"Upgrade to Post Jobs":"Post a Job"}</button>
                     </div>
                     <div className={`${free?'':'dn'}`}>
                         <FreeBanner company={company} name={username}/>
@@ -85,7 +85,7 @@ function Dashboard({companyid,backend_url,setcompanyid,setjobid}) {
                     <div className="flex flex-row-l flex-column-reverse-m flex-column-reverse w-90-l w-90-m w-100 center ">
                         <JobCardList jobs={jobdata} setjobid={setjobid} companyid={companyid}/>
                         <div className="w1 "></div>
-                        <div style={{height:"max-content"}} className="ma3 mr0 ph0-l pa2  br2 self-center bg-white c-shadow w-40-l w-60-m w-60 ml-auto-l ml0-m ml0 tc">
+                        <div style={{height:"max-content"}} className="ma3 mr0 ph0-l pa2  br2 self-start bg-white c-shadow w-40-l w-60-m w-60 ml-auto-l ml0-m ml0 tc">
                             <p className="f4-l f4-m f5">Your talent manager</p>
                             <p className="gray f5-l f5-m f6">Quirin Blendl</p>
                             <Avatar alt="Quirin" src={quirin} className={`center ${classes.large}`} />

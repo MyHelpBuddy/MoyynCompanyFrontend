@@ -23,7 +23,7 @@ export default function EmailtoReset() {
                     />
                 </div>
                 <div className='mt4'>
-                    <Button onClick={()=>setemailfound(!emailfound)} className='dim' variant="outlined" style={{ borderColor: "#265cff", color: "#265cff" }}>Send Email</Button>
+                    <Button onClick={()=>setemailfound(!emailfound)} className='dim' variant="outlined" style={{ borderColor: "#6EB6FF", color: "#6EB6FF" }}>Send Email</Button>
                 </div>
                 <div className={`${emailfound?'':'hide'} mt4`}>
                     <Alert severity="success">Email sent, please check your email id to reset your password</Alert>

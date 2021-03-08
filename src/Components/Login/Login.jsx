@@ -89,7 +89,7 @@ function Login({setlog,backend_url,setcompanydata}) {
                 </div>
                 <div onClick={()=>history.push('/email')} className="mb3 center gray f6-l f6-m f7 pointer dim w-80-l w-80-m w-100">Forgot password ?</div>
                 <div className='flex justify-center'>
-                    <Button onClick={auth} className='dim w-30-l w-35-m w-50' style={{backgroundColor:"#265cff",color:"white"}} variant="contained" >Login</Button>
+                    <Button onClick={auth} className='dim w-30-l w-35-m w-50' style={{backgroundColor:"#6EB6FF",color:"white"}} variant="contained" >Login</Button>
                 </div>
                 <div className={`${wrong || empty?'':'hide'} mt4`}>
                     <Alert severity="error">{wrong?'Wrong credentials, Try Again!':empty?'Field cannot be empty!':''}</Alert>
