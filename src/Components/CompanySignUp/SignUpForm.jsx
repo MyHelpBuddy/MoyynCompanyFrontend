@@ -69,7 +69,8 @@ function SignUpForm({backend_url, companyid, setregistered,signupforminitialvalu
                         location:values.location,
                         email: values.email, 
                         phone: values.phone,
-                        password:values.password
+                        password:values.password,
+                        number_jobs_posted: 0
                     })
                 }).then(response=>response.json())
                 .then(data => {

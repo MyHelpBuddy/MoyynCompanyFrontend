@@ -53,7 +53,8 @@ function JobForm({postjobinitialvalues,backend_url,companyid,jobid,editjob}) {
                             from:values.from,
                             to:values.to,
                             otherCountries:values.otherCountries,
-                            timestamp:new Date() 
+                            timestamp:new Date(),
+                            category:"Free"
                         })  
                     }).then(response=>response.json())
                     .then(data => {
