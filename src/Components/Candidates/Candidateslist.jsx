@@ -142,24 +142,25 @@ function Candidateslist({candidates, setcandidates, companyid, jobid, setjobid, 
                 </div>
                 {/* <Filter/> */}
                 <div style={{borderColor:"rgb(249, 246, 246)"}}className='flex self-start w-100 justify-start-l justify-center pt4 ml2-l pb1'>
-                    <Button onClick={defaultfunc} variant="contained" className={`cbtn ${def && !candidate_type && !iswithd?'cbtn-active':''}`}>Candidates</Button>
-                    <Button onClick={shortlist} variant="contained"   className={`cbtn ${candidate_type && !def && !iswithd?'cbtn-active':''}`}>Shortlisted</Button>
-                    <Button onClick={reject}  variant="contained"   className={`cbtn ${!candidate_type && !def && !iswithd?'cbtn-active':''}`}>Rejected</Button>
-                    <Button onClick={selectfun}  variant="contained"   className={`cbtn ${candidate_type && def && !iswithd?'cbtn-active':''}`}>Hired</Button>
-                    {/* <Button onClick={selectwith}  variant="contained"   className={`cbtn ${iswithd && !def && !candidate_type?'cbtn-active':''}`}>Withdrawal</Button> */}
-                    <div className="self-center w-20 ml-auto">
+                        <Button onClick={defaultfunc} variant="contained" className={`cbtn ${def && !candidate_type && !iswithd?'cbtn-active':''}`}>Candidates</Button>
+                        <Button onClick={shortlist} variant="contained"   className={`cbtn ${candidate_type && !def && !iswithd?'cbtn-active':''}`}>Shortlisted</Button>
+                        <Button onClick={reject}  variant="contained"   className={`cbtn ${!candidate_type && !def && !iswithd?'cbtn-active':''}`}>Rejected</Button>
+                        <Button onClick={selectfun}  variant="contained"   className={`cbtn ${candidate_type && def && !iswithd?'cbtn-active':''}`}>Hired</Button>
+                        {/* <Button onClick={selectwith}  variant="contained"   className={`cbtn ${iswithd && !def && !candidate_type?'cbtn-active':''}`}>Withdrawal</Button> */}
+                    </div>
+         
+                <div className='mv4 flex justify-between items-center'>
+                    <div className="w-20-l w-30-m w-40">
                         <ul className="flex w-100 justify-between ma0">
-                            <li onClick={(e)=>{activepage(0);setpage_no(1);}} className={`${active_page[0]?'activeli':''} pointer dim gray list`}>1</li>
-                            <li onClick={(e)=>{activepage(1);setpage_no(2);}} className={`${active_page[1]?'activeli':''} pointer dim gray list`}>2</li>
-                            <li onClick={(e)=>{activepage(2);setpage_no(3);}} className={`${active_page[2]?'activeli':''} pointer dim gray list`}>3</li>
-                            <li onClick={(e)=>{activepage(3);setpage_no(4);}} className={`${active_page[3]?'activeli':''} pointer dim gray list`}>4</li>
-                            <li onClick={(e)=>{activepage(4);setpage_no(5);}} className={`${active_page[4]?'activeli':''} pointer dim gray list`}>5</li>
-                            <li onClick={(e)=>{activepage(5);setpage_no(6);}} className={`${active_page[5]?'activeli':''} pointer dim gray list`}>6</li>
+                            <li onClick={(e)=>{activepage(0);setpage_no(1);}} className={`${active_page[0]?'activeli':''} pointer f6-l f7-m f7 dim gray list`}>1</li>
+                            <li onClick={(e)=>{activepage(1);setpage_no(2);}} className={`${active_page[1]?'activeli':''} pointer f6-l f7-m f7 dim gray list`}>2</li>
+                            <li onClick={(e)=>{activepage(2);setpage_no(3);}} className={`${active_page[2]?'activeli':''} pointer f6-l f7-m f7 dim gray list`}>3</li>
+                            <li onClick={(e)=>{activepage(3);setpage_no(4);}} className={`${active_page[3]?'activeli':''} pointer f6-l f7-m f7 dim gray list`}>4</li>
+                            <li onClick={(e)=>{activepage(4);setpage_no(5);}} className={`${active_page[4]?'activeli':''} pointer f6-l f7-m f7 dim gray list`}>5</li>
+                            <li onClick={(e)=>{activepage(5);setpage_no(6);}} className={`${active_page[5]?'activeli':''} pointer f6-l f7-m f7 dim gray list`}>6</li>
                         </ul>
                     </div>
-                </div>
-                <div className='mv3'>
-                    <p className='ma0 gray mr2 f6-l f7-m f8-mo tr'>{'All Candidates'}({count})</p>
+                    <p className="ma0 gray mr2 f6-l f7-m f7 tr">{'All Candidates'}({count})</p>
                 </div>
                 {isloading?
                     <div className='flex items-center justify-center ma3 br2'>
