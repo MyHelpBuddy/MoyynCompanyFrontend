@@ -16,7 +16,7 @@ function DashboardHeader({logout}) {
     return (
         <div className='header w-100 h3'>
             <div className='flex justify-start headflex items-center w-90 center'>
-                <div className='logoheader w4'><a className='link' href="https://moyyn.com/"><img className="Logo" src={Logo} alt="Moyyn"/>{/*<h3 className='white logo f4'>Moyyn</h3>*/}</a></div>
+                <div className='logoheader w4'><a className='link' href="https://client.moyyn.com"><img className="Logo" src={Logo} alt="Moyyn"/>{/*<h3 className='white logo f4'>Moyyn</h3>*/}</a></div>
                 <div className={`w-100 navbar nav-dash ml-auto ${burgerclicked ? 'nav-active' : ''}`}>
                     <ul className='flex nav w-90 navlist pa0 ma0 items-center'>
                         <li className='center list fw5 f7 f6-l'><a className='link gray dim dib' href="/Dashboard"><p>Dashboard</p></a></li>
