@@ -57,6 +57,7 @@ function Candidateslist({candidates, setcandidates, companyid, jobid, setjobid, 
 
     useEffect(()=>{
         if(jobid !== ""){
+            setisloading(true);
             fetch(mo_backend_url, {
                 method:'POST',
                 headers:{'Content-Type':'application/json'},
@@ -67,7 +68,6 @@ function Candidateslist({candidates, setcandidates, companyid, jobid, setjobid, 
                 })  
             }).then(response=>response.json())
             .then(data => {
-                setisloading(true);
                 if(data.exists){
                     fetch(mo_backend_url + "/" + jobid + "/" + page_no)
                     .then(response=>response.json())
@@ -169,15 +169,15 @@ function Candidateslist({candidates, setcandidates, companyid, jobid, setjobid, 
                 :
                     <div className='w-100 flex center flex-column'>
                     {
-                        candidates.length<=0 || candidates === undefined ?<div className='mt4 flex justify-center items-center'><p className='ma0 f3-l f4-m f6 gray tc'>No, Candidate matched with your job Profile</p></div>
+                        candidates.length<=0 || candidates === undefined ?<div className='mt4 flex justify-center items-center'><p className='ma0 f3-l f4-m f6 gray tc'>No, Candidates matched yet. You will be notified once there are new applicants</p></div>
                         :def && candidate_type?
-                            selected.length<=0? <div className='flex mt4 justify-center items-center'><p className='ma0 f3-l f4-m f6 gray tc'>No candidates selected!!</p></div>: selected.map((data,id) =><Selected candidate={data} key={id}/>)
+                            selected.length<=0? <div className='flex mt4 justify-center items-center'><p className='ma0 f3-l f4-m f6 gray tc'>No candidates selected yet</p></div>: selected.map((data,id) =><Selected candidate={data} key={id}/>)
                         :def?
-                           nrml.length<=0?<div className='flex mt4 justify-center items-center'><p className='ma0 f3-l f4-m f6 gray tc'>Sorry, no candidate's were found!</p></div>:nrml.map((data,id) =><Candidate candidate={data} key={id}/>)
+                           nrml.length<=0?<div className='flex mt4 justify-center items-center'><p className='ma0 f3-l f4-m f6 gray tc'>Sorry, No candidates were found!</p></div>:nrml.map((data,id) =><Candidate candidate={data} key={id}/>)
                         :candidate_type?
-                           shortlisted.length<=0?<div className='flex mt4 justify-center items-center'><p className='ma0 f3-l f4-m f6 gray tc'>No, candidate's were shortlisted yet!</p></div>:shortlisted.map((data,id) =><Shortlist candidate={data} key={id}/>)
+                           shortlisted.length<=0?<div className='flex mt4 justify-center items-center'><p className='ma0 f3-l f4-m f6 gray tc'>No candidates shortlisted yet</p></div>:shortlisted.map((data,id) =><Shortlist candidate={data} key={id}/>)
                         :
-                           rejected.length<=0?<div className='flex mt4 justify-center items-center'><p className='ma0 f3-l f4-m f6 gray tc'>No, candidate's were rejected yet!</p></div>:rejected.map((data,id) =><Rejected candidate={data} key={id}/>)
+                           rejected.length<=0?<div className='flex mt4 justify-center items-center'><p className='ma0 f3-l f4-m f6 gray tc'>No candidates rejected yet</p></div>:rejected.map((data,id) =><Rejected candidate={data} key={id}/>)
                     }
                 </div>
                 }

@@ -3,6 +3,10 @@
     min-height: 40vh;
 }
 
+.texta:focus{
+    border: 2px solid blue !important;
+}
+
 .help-ico{
     svg{
         height: 0.74em !important;

@@ -7,7 +7,7 @@ function Jobcard({job, setjobid}) {
 
     return (
         <div className="card ma1 bg-white ph3 mt3 br3 flex justify-between items-center">
-            <div className='flex w-30-l w-30-m w-50 flex-column'>
+            <div className='flex flex-1 w-30-l w-30-m w-50 flex-column'>
                 <p className='ma0 gray f8 f9-m f9-mo'>{job.careerLevel}</p>
                 <p className='ma0 f4-l f5-m mt1 f7_2-mo'>{job.jobTitle}</p>
                 <p className='ma0 gray f6-l mt1 f8-m f8-mo'>{job.city}, {job.country}</p>

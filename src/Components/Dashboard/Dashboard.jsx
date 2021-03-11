@@ -85,11 +85,11 @@ function Dashboard({companyid,backend_url,setcompanyid,setjobid}) {
                     <div className="flex flex-row-l flex-column-reverse-m flex-column-reverse w-90-l w-90-m w-100 center ">
                         <JobCardList jobs={jobdata} setjobid={setjobid} companyid={companyid}/>
                         <div className="w1"></div>
-                        <div style={{height:"max-content"}} className="ma3 mr0 ph0-l pa2  br2 self-start-l self-center-m self-center bg-white c-shadow w-40-l w-60-m w-60 ml-auto-l ml0-m ml0 tc">
+                        <div style={{height:"max-content"}} className="ma3 mr0 ph0-l pv3-l pa2  br2 self-start-l self-center-m self-center bg-white c-shadow w-40-l w-60-m w-60 ml-auto-l ml0-m ml0 tc">
                             <p className="f4-l f4-m f5">Your talent manager</p>
                             <p className="gray f5-l f5-m f6">Quirin Blendl</p>
                             <Avatar alt="Quirin" src={quirin} className={`center ${classes.large}`} />
-                            <p className="gray f6-l f7-m f8-mo">quirin@moyyn.com | +4917624917456</p>
+                            <p className="gray f6-l f7-m f8-mo"><a href="mailto:quirin@moyyn.com" style={{color:"#6EB6FF"}} className="link gray pointer">quirin@moyyn.com</a> | <a href="tel:+4917624917456" style={{color:"#6EB6FF"}} className="link gray pointer">+4917624917456</a></p>
                         </div>
                     </div>
                 </div>
