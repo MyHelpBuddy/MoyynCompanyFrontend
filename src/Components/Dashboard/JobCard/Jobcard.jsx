@@ -9,8 +9,8 @@ function Jobcard({job, setjobid}) {
         <div className="card ma1 bg-white ph3 mt3 br3 flex justify-between items-center">
             <div className='flex flex-1 w-30-l w-30-m w-50 flex-column'>
                 <p className='ma0 gray f8 f9-m f9-mo'>{job.careerLevel}</p>
-                <p className='ma0 f4-l f5-m mt1 f7_2-mo'>{job.jobTitle}</p>
-                <p className='ma0 gray f6-l mt1 f8-m f8-mo'>{job.city}, {job.country}</p>
+                <p className='ma0 f5-l f6-m mt1 f7_2-mo'>{job.jobTitle}</p>
+                <p className='ma0 gray f8 mt1 f9-m f9-mo'>{job.city}, {job.country}</p>
             </div>
             <div className='flex flex-1 flex-column items-center'>
                 <p className='ma0 dn db-m db-l mb2_2 gray f8 f10-m f10-mo'>No. of Candidates </p>
